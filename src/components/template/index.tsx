@@ -1,0 +1,4 @@
+/*
+this folder consist templates
+bigger components like sidebar header
+*/
