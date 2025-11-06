@@ -4,10 +4,10 @@ import { setLocale } from "@/utils/cookies";
 import { useRouter } from "next/navigation";
 
 export default function LangSwitcher() {
-  const router = useRouter();
+  const router = useRouter(); // use for navigation
 
   const switchLang = async (lang: string) => {
-    await setLocale(lang); // note 'locale', not 'NEXT_LOCALE'
+    await setLocale(lang);
     router.refresh();
   };
 
