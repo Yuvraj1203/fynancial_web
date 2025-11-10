@@ -1,30 +1,8 @@
+import { CustomColor, CustomRadius, CustomSize } from "@/services/types";
 import { Button } from "@heroui/react";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
-enum CustomCompColor {
-  default = "default",
-  primary = "primary",
-  secondary = "secondary",
-  success = "success",
-  warning = "warning",
-  danger = "danger",
-}
-
-enum CustomCompSize {
-  sm = "sm",
-  md = "md",
-  lg = "lg",
-}
-
-enum CustomCompRadius {
-  none = "none",
-  sm = "sm",
-  md = "md",
-  lg = "lg",
-  full = "full",
-}
-
-enum ButtonVariant {
+export enum ButtonVariant {
   solid = "solid",
   bordered = "bordered",
   light = "light",
@@ -34,7 +12,7 @@ enum ButtonVariant {
   ghost = "ghost",
 }
 
-enum ButtonType {
+export enum ButtonType {
   submit = "submit",
   reset = "reset",
   button = "button",
@@ -44,9 +22,9 @@ type CustomButtonProps = {
   children: ReactNode;
   className?: string;
   varient?: ButtonVariant;
-  color?: CustomCompColor;
-  size?: CustomCompSize;
-  radius?: CustomCompRadius;
+  color?: CustomColor;
+  size?: CustomSize;
+  radius?: CustomRadius;
   type?: ButtonType;
   fullWidth?: boolean;
   isDisabled?: boolean;
@@ -54,6 +32,7 @@ type CustomButtonProps = {
 };
 
 const CustomButton = ({
+  color = CustomColor.primary,
   isDisabled = false,
   type = ButtonType.button,
   ...props
@@ -61,7 +40,7 @@ const CustomButton = ({
   return (
     <Button
       variant={props.varient}
-      color={props.color}
+      color="primary"
       size={props.size}
       radius={props.radius}
       fullWidth={props.fullWidth}

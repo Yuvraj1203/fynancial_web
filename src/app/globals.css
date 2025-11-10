@@ -5,21 +5,155 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #006c48;
+  --onPrimary: #ffffff;
+  --primaryContainer: #85f9c0;
+  --onPrimaryContainer: #002113;
+  --secondary: #4d6356;
+  --onSecondary: #ffffff;
+  --secondaryContainer: #d0e8d8;
+  --onSecondaryContainer: #0a1f15;
+  --tertiary: #3c6472;
+  --onTertiary: #ffffff;
+  --tertiaryContainer: #c0e9fa;
+  --onTertiaryContainer: #001f28;
+  --error: #ba1a1a;
+  --onError: #ffffff;
+  --errorContainer: #ffdad6;
+  --onErrorContainer: #410002;
+  --background: #fbfdf8;
+  --onBackground: #191c1a;
+  --surface: #fbfdf8;
+  --onSurface: #191c1a;
+  --surfaceVariant: #dce5dd;
+  --onSurfaceVariant: #404943;
+  --outline: #707972;
+  --outlineVariant: #c0c9c1;
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverseSurface: #2e312f;
+  --inverseOnSurface: #eff1ed;
+  --inversePrimary: #67dca5;
+  --elevation-level0: #eef6ef00;
+  --elevation-level1: #eef6ef;
+  --elevation-level2: #e7f1ea;
+  --elevation-level3: #dfe7e5;
+  --elevation-level4: #dde6e3;
+  --elevation-level5: #d8e9df;
+  --surfaceDisabled: #191c1a1f;
+  --onSurfaceDisabled: #191c1a61;
+  --backdrop: #2a322d66;
+  --lightPrimaryContainer: #85f9c025;
+
+  /* fonts  */
+  --text-post4: 40px;
+  --text-pre5: 44px;
 }
 
 @theme inline {
+  /* Core Palette */
+  --color-primary: var(--primary);
+  --color-on-primary: var(--onPrimary);
+  --color-primary-container: var(--primaryContainer);
+  --color-on-primary-container: var(--onPrimaryContainer);
+
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--onSecondary);
+  --color-secondary-container: var(--secondaryContainer);
+  --color-on-secondary-container: var(--onSecondaryContainer);
+
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--onTertiary);
+  --color-tertiary-container: var(--tertiaryContainer);
+  --color-on-tertiary-container: var(--onTertiaryContainer);
+
+  --color-error: var(--error);
+  --color-on-error: var(--onError);
+  --color-error-container: var(--errorContainer);
+  --color-on-error-container: var(--onErrorContainer);
+
+  /* Surfaces & Background */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-on-background: var(--onBackground);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--onSurface);
+  --color-surface-variant: var(--surfaceVariant);
+  --color-on-surface-variant: var(--onSurfaceVariant);
+
+  /* Outline & Shadows */
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outlineVariant);
+  --color-shadow: var(--shadow);
+  --color-scrim: var(--scrim);
+
+  /* Inverse & Elevation */
+  --color-inverse-surface: var(--inverseSurface);
+  --color-inverse-on-surface: var(--inverseOnSurface);
+  --color-inverse-primary: var(--inversePrimary);
+
+  --color-elevation-level0: var(--elevation-level0);
+  --color-elevation-level1: var(--elevation-level1);
+  --color-elevation-level2: var(--elevation-level2);
+  --color-elevation-level3: var(--elevation-level3);
+  --color-elevation-level4: var(--elevation-level4);
+  --color-elevation-level5: var(--elevation-level5);
+
+  /* State & Misc */
+  --color-surface-disabled: var(--surfaceDisabled);
+  --color-on-surface-disabled: var(--onSurfaceDisabled);
+  --color-backdrop: var(--backdrop);
+  --color-light-primary-container: var(--lightPrimaryContainer);
+
+  /* fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* font size */
+  --text-post4: var(--text-post4);
+  --text-pre5: var(--text-pre5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary: #67dca5;
+    --onPrimary: #003823;
+    --primaryContainer: #005235;
+    --onPrimaryContainer: #85f9c0;
+    --secondary: #b4ccbc;
+    --onSecondary: #203529;
+    --secondaryContainer: #364b3f;
+    --onSecondaryContainer: #d0e8d8;
+    --tertiary: #a4cddc;
+    --onTertiary: #053542;
+    --tertiaryContainer: #234c5a;
+    --onTertiaryContainer: #c0e9fa;
+    --error: #ffb4ab;
+    --onError: #690005;
+    --errorContainer: #93000a;
+    --onErrorContainer: #ffb4ab;
+    --background: #191c1a;
+    --onBackground: #e1e3df;
+    --surface: #191c1a;
+    --onSurface: #e1e3df;
+    --surfaceVariant: #404943;
+    --onSurfaceVariant: #c0c9c1;
+    --outline: #8a938c;
+    --outlineVariant: #404943;
+    --shadow: #000000;
+    --scrim: #000000;
+    --inverseSurface: #e1e3df;
+    --inverseOnSurface: #2e312f;
+    --inversePrimary: #006c48;
+    --elevation-level0: #eef6ef00;
+    --elevation-level1: #1d2621;
+    --elevation-level2: #1f2b25;
+    --elevation-level3: #223129;
+    --elevation-level4: #22332b;
+    --elevation-level5: #24372e;
+    --surfaceDisabled: #e1e3df1f;
+    --onSurfaceDisabled: #e1e3df61;
+    --backdrop: #2a322d66;
+    --lightPrimaryContainer: #85f9c025;
   }
 }
 

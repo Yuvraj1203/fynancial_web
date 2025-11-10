@@ -1,2 +1,2 @@
 export { ProtectedRoutes } from "./protectedRoutes";
-export { PublicRoutes } from "./publiicRoutes";
+export { PublicRoutes } from "./publicRoutes";

@@ -1,5 +1,6 @@
 "use client";
-import { Button } from "@heroui/react";
+import { CustomButton } from "@/components/custom";
+import { CustomColor } from "@/services/types";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
           height={20}
           priority
         />
-        <Button>Hello this is</Button>
+        <CustomButton color={CustomColor.primary}>Hello this is</CustomButton>
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
@@ -37,9 +38,9 @@ export default function Home() {
             center.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <div className="bg-primary flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
